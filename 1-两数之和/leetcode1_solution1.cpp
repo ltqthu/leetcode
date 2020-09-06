@@ -2,6 +2,7 @@
 #include <vector>
 using namespace std;
 
+// 暴力
 class Solution {
 public:
     vector<int> twoSum(vector<int>& nums, int target) {

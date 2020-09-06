@@ -10,8 +10,8 @@
                 "${file}",
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}",
-                "&&",
-                "clear",
+                // "&&",
+                // "clear",
                 "&&",
                 "${fileDirname}/${fileBasenameNoExtension}",
             ],
@@ -29,7 +29,9 @@
                 "echo": false,
                 "reveal": "always", 
                 "focus": false,
-                "panel": "shared"
+                "panel": "shared",
+                "clear": true,
+                "showReuseMessage": false,
             },
         },
         {
@@ -53,9 +55,10 @@
             },
             "presentation": {
                 "echo": false,
-                "reveal": "always",
+                "reveal": "never",
                 "focus": false,
-                "panel": "shared"
+                "panel": "shared",
+                "showReuseMessage": false,
             },
         }
         
