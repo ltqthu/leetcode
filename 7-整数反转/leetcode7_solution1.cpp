@@ -6,17 +6,17 @@ using namespace std;
 class Solution {
 public:
     int reverse(int x) {
-        bool positive = (x>=0) ? true : false;
+        bool positive = (x >= 0) ? true : false;
         if (!positive) x = -x;
 
         int reverseInt = 0;
         int rem;
         while (x != 0) {
             rem = x % 10;
-            x = x/10;
+            x = x / 10;
             reverseInt = 10 * reverseInt + rem;
         }
-        return positive?reverseInt:-reverseInt;
+        return positive ? reverseInt : -reverseInt;
     }
 };
 
