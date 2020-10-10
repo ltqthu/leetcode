@@ -36,6 +36,7 @@ if [ ! -d "./$FOLDERNAME" ]; then
 #include <unordered_map>
 #include <unordered_set>
 #include <vector>
+#include "../common.h"
 
 using namespace std;
 

@@ -28,22 +28,16 @@ public:
                 left = mid + 1;
             }
         }
+        // 如果没找到
         if (res == -1) return {-1, -1};
+        // 如果找到，向两侧扩散寻找
         int left_res = res;
         int right_res = res;
-        while (left_res > 0) {
-            if (nums[left_res - 1] == target) {
-                left_res--;
-            } else {
-                break;
-            }
+        while (left_res > 0 || nums[left_res - 1] == target) {
+            left_res--;
         }
-        while (right_res < nums.size() - 1) {
-            if (nums[right_res + 1] == target) {
-                right_res++;
-            } else {
-                break;
-            }
+        while (right_res < nums.size() - 1 || nums[right_res + 1] == target) {
+            right_res++;
         }
 
         return {left_res, right_res};
