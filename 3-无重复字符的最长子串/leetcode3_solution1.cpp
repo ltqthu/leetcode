@@ -5,22 +5,24 @@
 using namespace std;
 
 class Solution {
-   public:
+public:
     int lengthOfLongestSubstring(string s) {
+        if (s.size() == 0) return 0;
         int n = s.size();
-        int left = 0, right = 1;
+        int right = 1;
         int res = 0;
-        unordered_set<char> set;
-        set.insert(s[0]);
+        unordered_set<char> hash;
+        hash.insert(s[0]);
 
-        for (; left < n; left++) {
+        for (int left = 0; left < n; left++) {
             if (left > 0) {
-                set.erase(s[left - 1]);
+                hash.erase(s[left - 1]);
             }
-            while (right < n && set.count(s[right]) == 0) {
-                set.insert(s[right]);
+            while (right < n && hash.count(s[right]) == 0) {
+                hash.insert(s[right]);
                 right++;
             }
+            res = max(res, right - left);
         }
         return res;
     }
