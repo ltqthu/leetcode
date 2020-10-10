@@ -1,0 +1,64 @@
+#include <algorithm>
+#include <iostream>
+#include <map>
+#include <set>
+#include <string>
+#include <unordered_map>
+#include <unordered_set>
+#include <vector>
+
+#include "../common.h"
+
+using namespace std;
+
+class Solution {
+public:
+    vector<int> searchRange(vector<int>& nums, int target) {
+        int left = 0;
+        int right = nums.size() - 1;
+        int res = -1;
+        while (left <= right) {
+            int mid = left + (right - left) / 2;
+            if (nums[mid] == target) {
+                res = mid;
+                break;
+            } else if (nums[mid] > target) {
+                right = mid - 1;
+            } else {
+                left = mid + 1;
+            }
+        }
+        if (res == -1) return {-1, -1};
+        int left_res = res;
+        int right_res = res;
+        while (left_res > 0) {
+            if (nums[left_res - 1] == target) {
+                left_res--;
+            } else {
+                break;
+            }
+        }
+        while (right_res < nums.size() - 1) {
+            if (nums[right_res + 1] == target) {
+                right_res++;
+            } else {
+                break;
+            }
+        }
+
+        return {left_res, right_res};
+    }
+};
+
+int main() {
+    Solution solution = Solution();
+    vector<int> v{5, 7, 7, 8, 8, 10};
+    int target = 8;
+    PrintContainer(solution.searchRange(v, target), "res: ");
+
+    v = {1};
+    target = 1;
+    PrintContainer(solution.searchRange(v, target), "res: ");
+
+    return 0;
+}
