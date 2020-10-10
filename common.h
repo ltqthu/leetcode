@@ -38,6 +38,14 @@ ListNode* InitList(const vector<T>& v) {
     return pDummy->next;
 }
 
+// 通过vector初始化链表
+template <typename T>
+ListNode* CreateList(const vector<T>& v) {
+    return InitList<T>(v);
+    // return nullptr;
+}
+// using CreateList = ListNode* InitList<T>(const vector<T>&);
+
 // 打印链表
 void PrintList(ListNode* pHead, const string& optstr = "") {
     cout << optstr;

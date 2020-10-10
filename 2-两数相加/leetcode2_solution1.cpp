@@ -1,27 +1,11 @@
 #include <iostream>
+#include <vector>
+
+#include "../common.h"
 using namespace std;
 
-/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode() : val(0), next(nullptr) {}
- *     ListNode(int x) : val(x), next(nullptr) {}
- *     ListNode(int x, ListNode *next) : val(x), next(next) {}
- * };
- */
-
-struct ListNode {
-    int val;
-    ListNode *next;
-    ListNode() : val(0), next(nullptr) {}
-    ListNode(int x) : val(x), next(nullptr) {}
-    ListNode(int x, ListNode *next) : val(x), next(next) {}
-};
-
 class Solution {
-   public:
+public:
     ListNode *addTwoNumbers(ListNode *l1, ListNode *l2) {
         ListNode *pHead = new ListNode();  // 头节点
         ListNode *pMove = pHead;           // 移动节点
@@ -58,69 +42,49 @@ class Solution {
     }
 };
 
-void Print(ListNode *pHead) {
-    ListNode *pMove = pHead;
-    while (pMove != nullptr) {
-        cout << pMove->val << " ";
-        pMove = pMove->next;
-    }
-    cout << endl;
-}
-
 void Test1() {
     cout << "Test1():" << endl;
-    ListNode l1 = ListNode(2);
-    ListNode l1_2 = ListNode(4);
-    ListNode l1_3 = ListNode(3);
-    l1.next = &l1_2;
-    l1.next->next = &l1_3;
-    Print(&l1);
+    ListNode *l1 = InitList(vector<int>{2, 4, 3});
+    PrintList(l1, "l1: ");
 
-    ListNode l2 = ListNode(5);
-    ListNode l2_2 = ListNode(6);
-    ListNode l2_3 = ListNode(4);
-    l2.next = &l2_2;
-    l2.next->next = &l2_3;
-    Print(&l2);
+    ListNode *l2 = InitList(vector<int>{5, 6, 4});
+    PrintList(l2, "l2: ");
 
     Solution s = Solution();
-    ListNode *list = s.addTwoNumbers(&l1, &l2);
-    Print(list);
+    ListNode *list = s.addTwoNumbers(l1, l2);
+    PrintList(list, "sum: ");
 }
 
 void Test2() {
     cout << "Test2():" << endl;
+    ListNode *l1 = CreateList(vector<int>{5});
+    PrintList(l1, "l1: ");
 
-    ListNode l1 = ListNode(5);
-    Print(&l1);
-
-    ListNode l2 = ListNode(5);
-    Print(&l2);
+    ListNode *l2 = InitList(vector<int>{5});
+    PrintList(l2, "l2: ");
 
     Solution s = Solution();
-    ListNode *list = s.addTwoNumbers(&l1, &l2);
-    Print(list);
+    ListNode *list = s.addTwoNumbers(l1, l2);
+    PrintList(list, "sum: ");
 }
 
 void Test3() {
     cout << "Test3():" << endl;
-    ListNode l1 = ListNode(1);
-    ListNode l1_2 = ListNode(8);
-    l1.next = &l1_2;
-    Print(&l1);
 
-    ListNode l2 = ListNode(0);
-    Print(&l2);
+    ListNode *l1 = InitList(vector<int>{1, 8});
+    PrintList(l1, "l1: ");
+
+    ListNode *l2 = InitList(vector<int>{0});
+    PrintList(l2, "l2: ");
 
     Solution s = Solution();
-    ListNode *list = s.addTwoNumbers(&l1, &l2);
-    Print(list);
+    ListNode *list = s.addTwoNumbers(l1, l2);
+    PrintList(list, "sum: ");
 }
 
 int main() {
     Test1();
     Test2();
     Test3();
-
     return 0;
 }

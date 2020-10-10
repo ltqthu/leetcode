@@ -27,7 +27,7 @@
             },
             "presentation": {
                 "echo": false,
-                "reveal": "always", 
+                "reveal": "always",
                 "focus": false,
                 "panel": "shared",
                 "clear": true,
@@ -39,7 +39,7 @@
             "label": "C/C++: g++ clean",
             "command": "rm",
             "args": [
-                "-rf", 
+                "-rf",
                 "${fileDirname}/${fileBasenameNoExtension}.dSYM",
                 "&&",
                 "rm",
@@ -61,7 +61,6 @@
                 "showReuseMessage": false
             },
         }
-        
     ],
     "version": "2.0.0"
 }
