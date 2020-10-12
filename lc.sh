@@ -28,17 +28,7 @@ if [ ! -d "./$FOLDERNAME" ]; then
         echo "创建文件："$CODENAME
 
         cat >./$CODENAME <<EOF
-#include <algorithm>
-#include <iostream>
-#include <map>
-#include <set>
-#include <string>
-#include <unordered_map>
-#include <unordered_set>
-#include <vector>
-#include "../common.h"
-
-using namespace std;
+#include "../leetcode.h"
 
 class Solution {
 public:

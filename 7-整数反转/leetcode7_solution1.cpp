@@ -1,5 +1,4 @@
-#include <iostream>
-using namespace std;
+#include "../leetcode.h"
 
 // 123
 // 123 % 10 = 3, 123/10 = 12

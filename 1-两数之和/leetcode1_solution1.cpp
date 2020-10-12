@@ -1,7 +1,4 @@
-#include <iostream>
-#include <vector>
-using namespace std;
-
+#include "../leetcode.h"
 // 暴力
 class Solution {
 public:

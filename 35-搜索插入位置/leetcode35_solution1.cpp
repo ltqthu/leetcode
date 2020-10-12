@@ -1,7 +1,4 @@
-#include <iostream>
-#include <string>
-#include <vector>
-using namespace std;
+#include "../leetcode.h"
 
 // 简单思想
 class Solution {

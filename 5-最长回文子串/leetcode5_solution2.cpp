@@ -1,7 +1,4 @@
-#include <iostream>
-#include <string>
-#include <vector>
-using namespace std;
+#include "../leetcode.h"
 
 // 动态规划法
 class Solution {

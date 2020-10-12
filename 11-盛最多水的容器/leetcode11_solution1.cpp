@@ -1,6 +1,4 @@
-#include <iostream>
-#include <vector>
-using namespace std;
+#include "../leetcode.h"
 
 // 两层遍历，暴力方法（超时）
 class Solution {

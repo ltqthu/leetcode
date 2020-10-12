@@ -1,8 +1,17 @@
-#ifndef __COMMON__H__
-#define __COMMON__H__
+#ifndef __LEETCODE__H__
+#define __LEETCODE__H__
 
+#include <algorithm>
 #include <iostream>
+#include <map>
+#include <queue>
+#include <set>
+#include <stack>
 #include <string>
+#include <unordered_map>
+#include <unordered_set>
+#include <vector>
+
 using namespace std;
 
 // 打印容器内容
@@ -69,4 +78,4 @@ void DestoryList(ListNode* pHead) {
     delete pHead;
 }
 
-#endif  // __COMMON__H__
+#endif  // __LEETCODE__H__

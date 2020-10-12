@@ -1,7 +1,4 @@
-#include <iostream>
-#include <map>
-#include <string>
-using namespace std;
+#include "../leetcode.h"
 
 class Solution {
 public:

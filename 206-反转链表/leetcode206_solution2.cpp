@@ -1,22 +1,4 @@
-/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode(int x) : val(x), next(NULL) {}
- * };
- */
-
-//  1->2->3->4->5->NULL
-
-#include <iostream>
-using namespace std;
-
-struct ListNode {
-    int val;
-    ListNode* next;
-    ListNode(int x) : val(x), next(NULL) {}
-};
+#include "../leetcode.h"
 
 class Solution {
 public:

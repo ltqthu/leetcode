@@ -1,8 +1,4 @@
-#include <iostream>
-#include <stack>
-#include <string>
-#include <unordered_map>
-using namespace std;
+#include "../leetcode.h"
 
 class Solution {
 public:

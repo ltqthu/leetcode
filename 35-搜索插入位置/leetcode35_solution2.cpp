@@ -1,6 +1,4 @@
-#include <iostream>
-#include <vector>
-using namespace std;
+#include "../leetcode.h"
 
 // 二分查找
 class Solution {

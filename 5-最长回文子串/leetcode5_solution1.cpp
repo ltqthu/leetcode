@@ -1,6 +1,4 @@
-#include <iostream>
-#include <string>
-using namespace std;
+#include "../leetcode.h"
 
 // 暴力方法
 class Solution {
