@@ -13,24 +13,10 @@ public:
 
 int main() {
     Solution solution = Solution();
-    ListNode* pHead = new ListNode(1);
-    ListNode* pNode2 = new ListNode(2);
-    ListNode* pNode3 = new ListNode(3);
-    ListNode* pNode4 = new ListNode(4);
-    ListNode* pNode5 = new ListNode(5);
-    ListNode* pNode6 = new ListNode(6);
-    pHead->next = pNode2;
-    pNode2->next = pNode3;
-    pNode3->next = pNode4;
-    pNode4->next = pNode5;
-    pNode5->next = pNode6;
+    ListNode* pHead = InitList(vector<int>{1, 2, 3, 4, 5, 6});
 
     ListNode* pRes = solution.reverseList(pHead);
-    while (pRes != nullptr) {
-        cout << pRes->val << " ";
-        pRes = pRes->next;
-    }
-    cout << endl;
+    PrintList(pRes);
 
     return 0;
 }
